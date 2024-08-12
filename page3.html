@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon CV en Ligne</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             color: #fff;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Prevents scrollbars */
+            overflow: auto; /* Permet le défilement de la page */
         }
         .background {
             position: fixed;
@@ -20,8 +21,17 @@
             height: 100%;
             background: url('images/background.jpg') no-repeat center center;
             background-size: cover;
-            filter: blur(10px); /* Apply blur to background */
-            z-index: -1; /* Place background behind content */
+            filter: blur(0);
+            z-index: -1; /* Place background derrière le contenu */
+            animation: blurAnimation 0.4s forwards; /* Animation pour flouter le fond */
+        }
+        @keyframes blurAnimation {
+            from {
+                filter: blur(0);
+            }
+            to {
+                filter: blur(7px);
+            }
         }
         .container {
             max-width: 900px;
@@ -31,6 +41,9 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             border-radius: 8px;
             position: relative;
+            min-height: 100vh;
+            box-sizing: border-box;
+            overflow: auto; /* Permet le défilement du contenu si nécessaire */
         }
         .header {
             text-align: center;
@@ -63,11 +76,16 @@
             margin-bottom: 10px;
         }
         .doc-link {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
             margin-top: 5px;
             color: #007bff;
             text-decoration: none;
             border-bottom: 1px dotted #007bff;
+        }
+        .doc-link i {
+            margin-right: 5px; /* Espacement entre l'icône et le texte */
+            font-size: 16px; /* Taille de l'icône */
         }
         .doc-link:hover {
             text-decoration: underline;
@@ -112,14 +130,22 @@
             <div class="experience">
                 <h3>Poste 1 - Entreprise 1</h3>
                 <p>Description de l'expérience professionnelle.</p>
-                <a href="images/certificat1.pdf" class="doc-link" target="_blank">Voir Certificat 1</a>
-                <a href="images/cv_poste1.pdf" class="doc-link" target="_blank">Télécharger CV Poste 1</a>
+                <a href="images/certificat1.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-search"></i> Voir Certificat 1
+                </a>
+                <a href="images/cv_poste1.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-download"></i> Télécharger CV Poste 1
+                </a>
             </div>
             <div class="experience">
                 <h3>Poste 2 - Entreprise 2</h3>
                 <p>Description de l'expérience professionnelle.</p>
-                <a href="images/certificat2.pdf" class="doc-link" target="_blank">Voir Certificat 2</a>
-                <a href="images/cv_poste2.pdf" class="doc-link" target="_blank">Télécharger CV Poste 2</a>
+                <a href="images/certificat2.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-search"></i> Voir Certificat 2
+                </a>
+                <a href="images/cv_poste2.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-download"></i> Télécharger CV Poste 2
+                </a>
             </div>
         </div>
         <div class="section">
@@ -127,14 +153,22 @@
             <div class="education">
                 <h3>Diplôme 1 - Établissement 1</h3>
                 <p>Description du diplôme.</p>
-                <a href="images/diplome1.pdf" class="doc-link" target="_blank">Voir Diplôme 1</a>
-                <a href="images/attestation1.pdf" class="doc-link" target="_blank">Télécharger Attestation Diplôme 1</a>
+                <a href="images/diplome1.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-search"></i> Voir Diplôme 1
+                </a>
+                <a href="images/attestation1.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-download"></i> Télécharger Attestation Diplôme 1
+                </a>
             </div>
             <div class="education">
                 <h3>Diplôme 2 - Établissement 2</h3>
                 <p>Description du diplôme.</p>
-                <a href="images/diplome2.pdf" class="doc-link" target="_blank">Voir Diplôme 2</a>
-                <a href="images/attestation2.pdf" class="doc-link" target="_blank">Télécharger Attestation Diplôme 2</a>
+                <a href="images/diplome2.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-search"></i> Voir Diplôme 2
+                </a>
+                <a href="images/attestation2.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-download"></i> Télécharger Attestation Diplôme 2
+                </a>
             </div>
         </div>
         <div class="section">
@@ -142,14 +176,22 @@
             <div class="education">
                 <h3>Formation 1 - Organisme</h3>
                 <p>Description de la formation.</p>
-                <a href="images/formation1.pdf" class="doc-link" target="_blank">Voir Formation 1</a>
-                <a href="images/attestation_formation1.pdf" class="doc-link" target="_blank">Télécharger Attestation Formation 1</a>
+                <a href="images/formation1.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-search"></i> Voir Formation 1
+                </a>
+                <a href="images/attestation_formation1.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-download"></i> Télécharger Attestation Formation 1
+                </a>
             </div>
             <div class="education">
                 <h3>Formation 2 - Organisme</h3>
                 <p>Description de la formation.</p>
-                <a href="images/formation2.pdf" class="doc-link" target="_blank">Voir Formation 2</a>
-                <a href="images/attestation_formation2.pdf" class="doc-link" target="_blank">Télécharger Attestation Formation 2</a>
+                <a href="images/formation2.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-search"></i> Voir Formation 2
+                </a>
+                <a href="images/attestation_formation2.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-download"></i> Télécharger Attestation Formation 2
+                </a>
             </div>
         </div>
     </div>

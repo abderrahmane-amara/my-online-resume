@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon CV en Ligne</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow: auto;
+        }
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('images/background.jpg') no-repeat center center;
+            background-size: cover;
+            filter: blur(0);
+            z-index: -1;
+            animation: blurAnimation 5s forwards;
+        }
+        @keyframes blurAnimation {
+            from {
+                filter: blur(0);
+            }
+            to {
+                filter: blur(4px);
+            }
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            position: relative;
+            min-height: 100vh;
+            box-sizing: border-box;
+            color: #333;
+            line-height: 1.6;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border: 4px solid #007bff;
+        }
+        .header h1 {
+            margin: 20px 0;
+            font-size: 2em;
+            color: #007bff;
+        }
+        .header p {
+            margin: 5px 0;
+            color: #555;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            font-size: 1.5em;
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        .experience, .education {
+            margin-bottom: 20px;
+        }
+        .doc-link {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .doc-link i {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+        .doc-link:hover {
+            text-decoration: underline;
+        }
+        .footer-links {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .footer-links a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            display: inline-flex;
+            align-items: center;
+        }
+        .footer-links a i {
+            margin-right: 8px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container animate">
+        <div class="header">
+            <img src="images/photo-profil.jpg" alt="Photo de Profil">
+            <h1>Abderrahmane AMARA</h1>
+            <p>SysOPS Administrator</p>
+            <p>Description: Passionné par l'optimisation des systèmes et la gestion des opérations, je mets mon expertise au service de la performance et de la sécurité des infrastructures IT.</p>
+            <div class="footer-links">
+                <a href="images/mon-CV.pdf" target="_blank">
+                    <i class="fas fa-download"></i> Télécharger mon CV
+                </a>
+                <a href="https://www.linkedin.com/in/abderrahmane-amara-49a677199/" target="_blank">
+                    <i class="fab fa-linkedin"></i> Visitez mon LinkedIn
+                </a>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Parcours Professionnel</h2>
+            <div class="experience">
+                <h3>Poste 1 - Entreprise 1</h3>
+                <p>Description de l'expérience professionnelle.</p>
+                <a href="images/certificat1.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-search"></i> Voir Certificat 1
+                </a>
+                <a href="images/cv_poste1.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-download"></i> Télécharger CV Poste 1
+                </a>
+            </div>
+            <div class="experience">
+                <h3>Poste 2 - Entreprise 2</h3>
+                <p>Description de l'expérience professionnelle.</p>
+                <a href="images/certificat2.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-search"></i> Voir Certificat 2
+                </a>
+                <a href="images/cv_poste2.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-download"></i> Télécharger CV Poste 2
+                </a>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Parcours Éducatif</h2>
+            <div class="education">
+                <h3>Diplôme 1 - Établissement 1</h3>
+                <p>Description du diplôme.</p>
+                <a href="images/diplome1.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-search"></i> Voir Diplôme 1
+                </a>
+                <a href="images/attestation1.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-download"></i> Télécharger Attestation Diplôme 1
+                </a>
+            </div>
+            <div class="education">
+                <h3>Diplôme 2 - Établissement 2</h3>
+                <p>Description du diplôme.</p>
+                <a href="images/diplome2.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-search"></i> Voir Diplôme 2
+                </a>
+                <a href="images/attestation2.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-download"></i> Télécharger Attestation Diplôme 2
+                </a>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Formations Complémentaires</h2>
+            <div class="education">
+                <h3>Formation 1 - Organisme</h3>
+                <p>Description de la formation.</p>
+                <a href="images/formation1.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-search"></i> Voir Formation 1
+                </a>
+                <a href="images/attestation_formation1.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-download"></i> Télécharger Attestation Formation 1
+                </a>
+            </div>
+            <div class="education">
+                <h3>Formation 2 - Organisme</h3>
+                <p>Description de la formation.</p>
+                <a href="images/formation2.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-search"></i> Voir Formation 2
+                </a>
+                <a href="images/attestation_formation2.pdf" class="doc-link" target="_blank">
+                    <i class="fas fa-download"></i> Télécharger Attestation Formation 2
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
